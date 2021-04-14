@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,9 +11,8 @@ public class 단어변환 {
         String target = "cog";
         String[] words = {"hot", "dot", "dog", "lot", "log"};
 
-        Set<String> wordSet = new HashSet<>();      // words를 검사해서 target이 있는지 확인.
-        for (String s : words)
-            wordSet.add(s);
+        // words를 검사해서 target이 있는지 확인.
+        Set<String> wordSet = new HashSet<>(Arrays.asList(words));
 
         check = new boolean[words.length];
         min = Integer.MAX_VALUE;
