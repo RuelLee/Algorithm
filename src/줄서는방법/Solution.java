@@ -36,7 +36,7 @@ public class Solution {
         for (int i = n - 1; i >= 0; i--) {      // 사용되지 않은 숫자들 중 count 번째의 숫자를 꺼내고, 꺼냈다고 체크해주자.
             int count = (int) factorial[i][1];
             for (int j = 0; j < n; j++) {
-                if (check[j] == false) {
+                if (!check[j]) {
                     if (count > 0)
                         count--;
                     else if (count == 0) {
