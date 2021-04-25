@@ -13,7 +13,7 @@ public class Solution {
         count = 0;
         Arrays.fill(dp, true);
 
-        for (int i = 2; i < dp.length; i++) {
+        for (int i = 2; i < dp.length; i++) {   // 소수는 dp로 미리 구해두자.
             if (dp[i]) {
                 for (int j = 2; i * j < dp.length; j++)
                     dp[i * j] = false;
@@ -24,8 +24,9 @@ public class Solution {
     }
 
     static void selectThreeNum(int[] nums, int sum, int depth, int preSelectedIdx) {
+        // 백트래킹을 이용하여 숫자들의 조합의 경우를 뽑아내자.
         if (depth == 3) {
-            if (dp[sum])
+            if (dp[sum])    // 구해진 숫자의 합이 소수일 때 count 증가.
                 count++;
             return;
         }
