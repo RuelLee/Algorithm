@@ -1,5 +1,7 @@
 package 이진변환반복하기;
 
+import java.util.Arrays;
+
 public class Solution {
     public static void main(String[] args) {
         // 주어진대로, 0을 제외 -> 남겨진 1의 길이를 2진법 숫자로 변환을 반복
@@ -27,5 +29,6 @@ public class Solution {
                 cycleCount++;
             s = newS;
         }
+        System.out.println(Arrays.toString(new int[]{cycleCount, zeroCount}));
     }
 }
