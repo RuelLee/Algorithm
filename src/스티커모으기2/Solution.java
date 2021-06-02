@@ -18,7 +18,7 @@ public class Solution {
             dpFirstDetached[0] = dpFirstDetached[1] = sticker[0];
             dpFirstNotDetached[1] = sticker[1];
 
-            for (int i = 2; i < sticker.length; i++) {      // 현재 스티커를 뜯어냈을 경우와, 이전 스티커를 뜯어냈을 경우 중 큰 값을 저장한다.
+            for (int i = 2; i < sticker.length; i++) {      // 현재 스티커를 뜯어내는 경우와, 이전 스티커까지 구한 최대값 중 큰 값을 가져온다.
                 dpFirstDetached[i] = Math.max(dpFirstDetached[i - 2] + sticker[i], dpFirstDetached[i - 1]);
                 dpFirstNotDetached[i] = Math.max(dpFirstNotDetached[i - 2] + sticker[i], dpFirstNotDetached[i - 1]);
             }
