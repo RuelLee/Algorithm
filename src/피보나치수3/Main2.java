@@ -16,7 +16,7 @@ public class Main2 {
         // ( An   ) =  ( 1 0 )  *  ( A0   )
         // 피보나치 수를 행렬의 제곱으로 구할 수 있게 되었다.
         // 짝수일 때는 A^2n = A^n * A^n 으로 바꿀 수 있고,
-        // 홀수 일 때는 A^2n+1 = A^n + A^n + A로 바꿀 수 있다.
+        // 홀수 일 때는 A^2n+1 = A^n * A^n * A로 바꿀 수 있다.
 
         Scanner sc = new Scanner(System.in);
         long n = sc.nextLong();
