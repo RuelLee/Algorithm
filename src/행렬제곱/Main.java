@@ -7,7 +7,7 @@ public class Main {
     static HashMap<Long, int[][]> memo;
 
     public static void main(String[] args) {
-        // 피보나치 수열의 방법2와 같은 요령
+        // 피보나치 수열의 방법2와 같은 요령.
         // 제곱으로 주어지는 수가 크므로, 메모이제이션을 활용한 분할정복으로 처리하자.
         Scanner sc = new Scanner(System.in);
 
