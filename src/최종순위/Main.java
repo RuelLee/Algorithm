@@ -62,14 +62,14 @@ public class Main {
             }
             StringBuilder sb = new StringBuilder();
             int count = 0;
-            while (!queue.isEmpty() && queue.size() == 1) {     //큐 사이즈가 1보다 커진다면 두 숫자 간의 순서를 알 수 없는 상태!
+            while (queue.size() == 1) {     //큐 사이즈가 1보다 커진다면 두 숫자 간의 순서를 알 수 없는 상태!
                 int current = queue.poll();
 
                 for (int next : nextNums[current]) {
                     if (--inDegree[next] == 0)
                         queue.add(next);
                 }
-                sb.append(current + " ");
+                sb.append(current).append(" ");
                 count++;
             }
 
