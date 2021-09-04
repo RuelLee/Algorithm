@@ -16,7 +16,7 @@ public class Main {
         // 예를 들어 11이 주어진다면, 1 ~ 9까지 한번씩 등장하고, 10에서 1과 0, 11에서 1이 2번 등장하여
         // 1 4 1 1 1 1 1 1 1 1
         // 가 답으로 나와야한다.
-        // 1321 이라는 숫자가 주어졌을 때 십의 자리를 살펴보자 (계산의 편의성을 위해 맨 앞자리가 0인 숫자가 존재한다고 치자. ex) 0021, 0055, 0103)
+        // 1321 이라는 숫자가 주어졌을 때 십의 자리를 살펴보자 (계산의 편의성을 위해 앞자리가 0인 숫자가 존재한다고 치자. ex) 0021, 0055, 0103)
         // 여기서 십의 자리를 보자
         // 십의 자리에서 2미만의 숫자가 나오는 경우는
         // (13 - 0 + 1) * 10 이 된다. (ex 십의 자리가 1일 때, 01* 10개, 11* 10개,,,, 131* 10개)
@@ -36,16 +36,16 @@ public class Main {
         int[] nums = new int[10];
 
         for (int i = 0; i < stringNumber.length(); i++) {
-            int num = stringNumber.charAt(i) - '0';
-            int multi = (int) Math.pow(10, stringNumber.length() - 1 - i);
+            int num = stringNumber.charAt(i) - '0';         // 각 자리의 숫자
+            int multi = (int) Math.pow(10, stringNumber.length() - 1 - i);      // 현재 몇의 자리인지(ex 1, 10, 100)
 
-            for (int j = 0; j < num; j++)
+            for (int j = 0; j < num; j++)                       // 0 부터 num - 1 까지의 숫자는 (number / (multi * 10) + 1) * multi 번 multi 자리에 등장한다.
                 nums[j] += (number / (multi * 10) + 1) * multi;
-            for (int j = num; j < 10; j++)
+            for (int j = num; j < 10; j++)                      // num 부터 9까지의 숫자는 (number / (multi * 10)) * multi 번 multi 자리에 등장한다
                 nums[j] += (number / (multi * 10)) * multi;
-            nums[num] += number % multi + 1;
+            nums[num] += number % multi + 1;                // 추가적으로 숫자 num은 자기 자리 이하의 숫자 + 1 만큼 더 등장한다.
         }
-        for (int i = 0; i < stringNumber.length(); i++)
+        for (int i = 0; i < stringNumber.length(); i++)         // 각 자리에 있다고 가정했던 0의 개수를 제해준다.
             nums[0] -= (int) Math.pow(10, i);
         StringBuilder sb = new StringBuilder();
         for (int num : nums)
