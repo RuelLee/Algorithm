@@ -48,21 +48,14 @@ public class Main {
         int needLeftTurn = currentNum <= targetNum ? targetNum - currentNum : 10 - currentNum + targetNum;      // 왼쪽으로 돌릴 경우 회전 수
         int needRightTurn = targetNum <= currentNum ? currentNum - targetNum : currentNum + 10 - targetNum;     // 오른쪽으로 돌릴 경우 회전 수
 
-        if (n == dp.length - 1)         // 왼쪽으로 돌리든 오른쪽으로 돌리든 두 값 중 최소값을 저장하고 리턴해주자.
+        if (n == dp.length - 1)         // 마지막 나사인 경우에는, 왼쪽으로 돌리든 오른쪽으로 돌리든 두 값 중 최소값을 저장하고 리턴해주자.
             return dp[n][leftTurn] = Math.min(needLeftTurn, needRightTurn);
 
         // n번째 나사를 왼쪽으로 needLeftTurn 만큼 돌린다면, n + 1번째 나사를 (leftTurn + needLeftTurn) % 10 만큼 왼쪽으로 돌렸을 때의 최소 회전 수에 추가로 needLeftTurn 만큼을 회전시켜야한다.
         int totalTurnWhenLeftTurn = findMinTurn(n + 1, (leftTurn + needLeftTurn) % 10) + needLeftTurn;
         // n번째 나사를 오른쪽으로 needRightTurn 만큼 돌린다면 n + 1번째 나사를 leftTurn 만큼 오른쪽으로 돌렸을 때의 최소 회전 수에 추가로 needRightTurn 만큼을 회전시켜야한다.
         int totalTurnWhenRightTurn = findMinTurn(n + 1, leftTurn) + needRightTurn;
-        // 두 값 중 작은 값을 가져온다
-        int minTurn = Math.min(totalTurnWhenLeftTurn, totalTurnWhenRightTurn);
-
-        // dp[n][leftTurn]의 값이 0이거나 더 작은 값으로 갱신된다면 값을 넣어주고
-        if (dp[n][leftTurn] == 0 || dp[n][leftTurn] > minTurn)
-            dp[n][leftTurn] = minTurn;
-
-        // 현재 dp 값을 리턴해주자.
-        return dp[n][leftTurn];
+        // 두 값 중 작은 값을 dp에 저장하고 리턴하자.
+        return dp[n][leftTurn] = Math.min(totalTurnWhenLeftTurn, totalTurnWhenRightTurn);
     }
 }
