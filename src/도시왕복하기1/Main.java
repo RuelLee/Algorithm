@@ -69,7 +69,7 @@ public class Main {
                 }
             }
         }
-        return 0;       // 여기까지 진해됐다면 경로의 없는 경우. 0을 리턴해주자.
+        return 0;       // 여기까지 진행 됐다면 경로의 없는 경우. 0을 리턴해주자.
     }
 
     static void init(int n, int p, Scanner sc) {
