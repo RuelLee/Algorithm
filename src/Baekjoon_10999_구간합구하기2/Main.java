@@ -18,7 +18,6 @@ public class Main {
     static long[] segmentTree;
     static long[] lazy;
 
-
     public static void main(String[] args) throws IOException {
         // n(최대 100만)개의 수가 주어지는데 이 수들의 값의 변경이 빈번히 일어나며, 우리는 어떤 부분의 합을 구하려고 한다
         // m은 변경 횟수, k는 구간합을 구하는 횟수.
