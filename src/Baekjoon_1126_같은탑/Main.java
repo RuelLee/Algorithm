@@ -52,6 +52,8 @@ public class Main {
                     maxHeight[i][j - blocks[i]] = Math.max(maxHeight[i][j - blocks[i]], maxHeight[i - 1][j]);
             }
         }
+        // 최종적으로 n개의 블록을 모두 살펴보고, 높이 차이가 0인 탑이 존재한다면 그 탑의 높이가 답이다
+        // maxHeight[n - 1][0]이 0이라면 불가능한 경우이므로 -1을 출력. 그렇지 않고, 값이 존재한다면 그 값을 출력한다.
         System.out.println(maxHeight[n - 1][0] == 0 ? -1 : maxHeight[n - 1][0]);
     }
 }
