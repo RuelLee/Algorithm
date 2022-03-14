@@ -9,6 +9,7 @@
 package Baekjoon_10999_구간합구하기2;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
@@ -59,7 +60,7 @@ public class Main {
             int c = Integer.parseInt(st.nextToken());
             if (a == 1) {       // a가 1일 경우
                 // b ~ c구간에 대해 d값만큼 값의 변경이 이뤄진다.
-                int d = Integer.parseInt(st.nextToken());
+                long d = Long.parseLong(st.nextToken());
                 update(1, d, b, c, 1, n);
             } else      // 그렇지 않을 경우, b ~ c까지의 합을 구한다.
                 sb.append(getSum(1, b, c, 1, n)).append("\n");
@@ -95,7 +96,7 @@ public class Main {
     }
 
 
-    static void update(int loc, int diffValue, int targetStart, int targetEnd, int seekStart, int seekEnd) {        // 세그먼트 트리를 업데이트
+    static void update(int loc, long diffValue, int targetStart, int targetEnd, int seekStart, int seekEnd) {        // 세그먼트 트리를 업데이트
         lazyUpdate(loc, seekStart, seekEnd);        // lazy값이 있다면 자식노드로 내려보내고
         if (targetStart == seekStart && targetEnd == seekEnd) {     // 범위가 일치한다면
             lazy[loc] += diffValue;     // 더 이상 내려가지말고 lazy 값만 주자.
