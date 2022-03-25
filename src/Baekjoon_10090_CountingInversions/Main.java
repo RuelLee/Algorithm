@@ -1,6 +1,6 @@
 /*
  Author : Ruel
- Problem : Baekjoon 10090번 역전 계산
+ Problem : Baekjoon 10090번 Counting Inversions
  Problem address : https://www.acmicpc.net/problem/10090
  GIt hub : https://github.com/RuelLee
  Mail Address : lunaticmoonlight@gmail.com
