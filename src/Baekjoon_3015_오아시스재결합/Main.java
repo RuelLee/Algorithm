@@ -42,11 +42,11 @@ public class Main {
             if (!stack.isEmpty()) {
                 // 만약 스택 top에 i번째 사람과 같은 키의 사람이 존재한다면, 연속한 사람의 수를 추가해준다.
                 // sequentialSameHeight[i]에 해당 sequentialSameHeight[stack.pop()] + 1을 넣어준다
-                // 그리고 해당 스택의 top은 제거해준다.
+                // 그리고 해당 사람은 스택의 top에서 제거해준다.
                 if (people[stack.peek()] == people[i])
                     count += sequentialSameHeight[i] = sequentialSameHeight[stack.pop()] + 1;
 
-                // 만약 스택이 아직 비어있지 않다면, i번째 사람보다 키 큰 사람이 있을 것이다
+                // 같은 키 사람을 제거했는데, 스택이 아직 비어있지 않다면, i번째 사람보다 키 큰 사람이 있을 것이다
                 // 따라서 해당 사람과 마주볼 수 있으므로, 한 쌍으로 세어준다.
                 if (!stack.isEmpty())
                     count++;
