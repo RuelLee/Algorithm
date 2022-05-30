@@ -20,7 +20,6 @@ public class Main {
     static int source;
     static int sink;
 
-
     public static void main(String[] args) throws IOException {
         // n명 사람, m개의 서점이 주어진다
         // n명의 사람이 구하려는 책의 개수, m개의 서점이 갖고 있는 책의 수
