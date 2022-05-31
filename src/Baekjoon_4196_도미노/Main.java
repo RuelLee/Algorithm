@@ -6,7 +6,7 @@
  Mail Address : lunaticmoonlight@gmail.com
 */
 
-package 도미노;
+package Baekjoon_4196_도미노;
 
 import java.util.ArrayList;
 import java.util.List;
