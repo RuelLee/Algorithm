@@ -60,8 +60,7 @@ public class Main {
                 Arrays.fill(ft, Integer.MAX_VALUE);
             for (int fire : fireLocs)
                 fireTimes[fire / w][fire % w] = 0;
-            Queue<Integer> queue = new LinkedList<>();
-            queue.addAll(fireLocs);
+            Queue<Integer> queue = new LinkedList<>(fireLocs);
             while (!queue.isEmpty()) {
                 int current = queue.poll();
                 int row = current / w;
