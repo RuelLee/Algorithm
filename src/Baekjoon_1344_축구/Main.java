@@ -42,7 +42,7 @@ public class Main {
         double pa = 0;
         double pb = 0;
         for (int primeNumber : primeNumbers) {
-            // 18∏primeNumber * p^primbrNumer * (1 - p)^(18 - primeNumber)
+            // 18CprimeNumber * p^primbrNumer * (1 - p)^(18 - primeNumber)
             // 각 팀이 primeNumber 개의 골을 기록할 확률을 더해준다.
             pa += combinations[18][primeNumber] * Math.pow(aPercent, primeNumber) * Math.pow((1 - aPercent), 18 - primeNumber);
             pb += combinations[18][primeNumber] * Math.pow(bPercent, primeNumber) * Math.pow((1 - bPercent), 18 - primeNumber);
