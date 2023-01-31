@@ -59,7 +59,7 @@ public class Main {
             for (int j = 0; j < matrix.length; j++) {
                 // i -> j가 성립하면
                 // count 증가, StringBuilder에 기록
-                if (matrix[i][j]) {
+                if (i != j && matrix[i][j]) {
                     count++;
                     sb.append((char) (i + 'A')).append(" ").append("=> ").append((char) (j + 'A')).append("\n");
                 }
