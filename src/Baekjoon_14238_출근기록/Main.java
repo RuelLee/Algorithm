@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // 매일 출근할 수 있는 A, 격일로 출근하는 B,
         // 한번 출근하면 이틀을 쉬어야하는 C가 있다.
-        // 출근 기록 S까 주어졌을 때, S의 모든 순열 중 올바른 출근 기록 중 하나를 출력하라
+        // 출근 기록 S가 주어졌을 때, S의 모든 순열 중 올바른 출근 기록 중 하나를 출력하라
         //
         // DP 문제
         // 각 사람마다 연속하여 출근할 수 있는 정도가 다르다.
