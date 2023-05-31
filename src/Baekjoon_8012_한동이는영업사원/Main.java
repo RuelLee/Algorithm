@@ -6,7 +6,7 @@
  Mail Address : lunaticmoonlight@gmail.com
 */
 
-package Baekjoon_한동이는영업사원;
+package Baekjoon_8012_한동이는영업사원;
 
 import java.io.BufferedReader;
 import java.io.IOException;
