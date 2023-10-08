@@ -4,7 +4,7 @@
  Problem address : https://www.acmicpc.net/problem/22865
  GIt hub : https://github.com/RuelLee
  Mail Address : lunaticmoonlight@gmail.com
-*
+*/
 
 package Baekjoon_22865_가장먼곳;
 
