@@ -27,7 +27,10 @@ public class Main {
         // 따라서 n이상의 사탕을 얻기 위해서는
         // 한번 던질 때 나올 수 있는 1 ~ 6 수에 대해서, 즉
         // n - 6 ~ n -1번 던진 기댓값에서 해당하는 수가 나와 n이 되는 경우이다.
-        // 이 때 던짐은 한번 증가하였고,
+        // 점화식은
+        // dp[i] = (dp[i-1] + 1) / 6 + (dp[i-2] + 1) / 6 + ... + (dp[i-5] + 1) / 6
+        // 으로 세울 수 있고 이 값을 구하면 된다.
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
@@ -38,9 +41,6 @@ public class Main {
         // 6, 5, ..., 1개의 사탕을 주사위 한번을 던져 얻을 수 있고
         // (-5개의 기댓값 횟수 + 1회 던짐) * (1 / 6)이 -5회로부터 6을 얻어 1개를 얻는 기대값이다.
         // 하지만 당연히 음수의 기댓값은 0이므로, 음수의 기대값은 0으로 취급하여 계산한다.
-        // 점화식은
-        // dp[i] = (dp[i-1] + 1) / 6 + (dp[i-2] + 1) / 6 + ... + (dp[i-5] + 1) / 6
-        // 으로 세울 수 있고 이 값을 구하면 된다.
         for (int i = 1; i < dp.length; i++) {
             for (int j = 1; j < 7; j++)
                 dp[i] += (dp[Math.max(i - j, 0)] + 1) / 6;
