@@ -32,7 +32,7 @@ public class Main {
         // 오븐의 깊이 d, 피자 반죽의 개수 n
         int d = Integer.parseInt(st.nextToken());
         int n = Integer.parseInt(st.nextToken());
-        
+
         // 오븐의 사이즈
         int[] oven = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         // 통과할 수 있는 반죽의 크기로 재계산한다.
@@ -41,14 +41,14 @@ public class Main {
             oven[i] = Math.min(oven[i], oven[i - 1]);
         // 피자 반죽
         int[] pizzas = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-        
+
         // 현재 사용할 수 있는 최대 깊이
         int maxDepth = oven.length - 1;
         boolean possible = true;
         // 순서대로 피자를 넣는다.
         for (int pizza : pizzas) {
             // 피자를 넣을 수 있는 가장 깊은 깊이
-            maxDepth = findIdx(pizza, 0, maxDepth, oven) - 1;
+            maxDepth = findIdx(pizza, maxDepth, oven) - 1;
             // 만약 그 깊이가 -1보다 작다면 불가능한 경우.
             if (maxDepth < -1) {
                 possible = false;
@@ -63,7 +63,8 @@ public class Main {
     }
 
     // 이분 탐색을 통해 피자가 놓일 수 있는 최대 깊이를 찾는다.
-    static int findIdx(int size, int start, int end, int[] oven) {
+    static int findIdx(int size, int end, int[] oven) {
+        int start = 0;
         while (start <= end) {
             int mid = (start + end) / 2;
             if (size <= oven[mid])
