@@ -38,7 +38,7 @@ public class Main {
         // n종류의 당근을 t일 동안 재배한다.
         int n = Integer.parseInt(st.nextToken());
         int t = Integer.parseInt(st.nextToken());
-        
+
         // 당근들
         int[][] carrots = new int[n][2];
         for (int i = 0; i < carrots.length; i++) {
@@ -46,15 +46,15 @@ public class Main {
             for (int j = 0; j < carrots[i].length; j++)
                 carrots[i][j] = Integer.parseInt(st.nextToken());
         }
-        
+
         // 영양제에 따라 오름차순 정렬
         Arrays.sort(carrots, Comparator.comparingInt(o -> o[1]));
         long sum = 0;
         // t - n + i + 1번째 날 i번 당근을 먹는다
         // 해당 때까지 투여된 영양제의 개수는 t-n+i개
         for (int i = 0; i < carrots.length; i++)
-            sum += carrots[i][0] + carrots[i][1] * (t - n + i);
-        
+            sum += carrots[i][0] + carrots[i][1] * (long) (t - n + i);
+
         // 답안 출력
         System.out.println(sum);
     }
