@@ -66,8 +66,7 @@ public class Main {
                     break;
                 // 같은 접두사의 길이가 더 길어졌거나
                 // 길이는 같지만, 입력 순이 더 이른 단어가 찾아졌다면 값을 교체
-                else if (currentSame < same ||
-                        (currentSame == same && hashMap.get(words[j]) < candidateIdxes[1])) {
+                else if (currentSame < same || hashMap.get(words[j]) < candidateIdxes[1]) {
                     currentSame = same;
                     candidateIdxes[1] = hashMap.get(words[j]);
                 }
