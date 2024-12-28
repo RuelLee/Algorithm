@@ -2,7 +2,7 @@
  Author : Ruel
  Problem : Baekjoon 1005번 ACM Craft
  Problem address : https://www.acmicpc.net/problem/1005
- GIt hub : https://github.com/RuelLee
+ Git hub : https://github.com/RuelLee
  Mail Address : lunaticmoonlight@gmail.com
 */
 
