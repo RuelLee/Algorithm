@@ -90,9 +90,7 @@ public class Main {
                         dp[i + 1][j + 1][k + 1] = Math.max(dp[i + 1][j + 1][k + 1], dp[i][j][k]);
                 }
             }
-
         }
-        
         // 모두 계산할 결과값 출력
         System.out.println(dp[n][n - numBoxes.get(0).size()][n - numBoxes.get(1).size()]);
     }
