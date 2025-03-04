@@ -6,7 +6,7 @@
  Mail Address : lunaticmoonlight@gmail.com
 */
 
-package 우체국;
+package Baekjoon_2141_우체국;
 
 import java.io.BufferedReader;
 import java.io.IOException;
