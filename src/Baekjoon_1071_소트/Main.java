@@ -2,7 +2,7 @@
  Author : Ruel
  Problem : Baekjoon 1071번 소트
  Problem address : https://www.acmicpc.net/problem/1071
- GIt hub : https://github.com/RuelLee
+ Git hub : https://github.com/RuelLee
  Mail Address : lunaticmoonlight@gmail.com
 */
 
