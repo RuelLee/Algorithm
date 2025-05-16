@@ -2,7 +2,7 @@
  Author : Ruel
  Problem : Baekjoon 1014번 컨닝
  Problem address : https://www.acmicpc.net/problem/1014
- GIt hub : https://github.com/RuelLee
+ Git hub : https://github.com/RuelLee
  Mail Address : lunaticmoonlight@gmail.com
 */
 
