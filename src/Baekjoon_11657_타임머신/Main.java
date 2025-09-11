@@ -6,7 +6,7 @@
  Mail Address : lunaticmoonlight@gmail.com
 */
 
-package 타임머신;
+package Baekjoon_11657_타임머신;
 
 import java.util.ArrayList;
 import java.util.Arrays;
