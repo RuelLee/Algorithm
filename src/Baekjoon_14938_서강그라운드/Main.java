@@ -6,7 +6,7 @@
  Mail Address : lunaticmoonlight@gmail.com
 */
 
-package 서강그라운드;
+package Baekjoon_14938_서강그라운드;
 
 import java.io.BufferedReader;
 import java.io.IOException;
