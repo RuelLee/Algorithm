@@ -79,7 +79,7 @@ public class Main {
                 else
                     right = mid;
             }
-            // 최종저긍로 구해진 left값은 좌표압축이 된 값이다.
+            // 최종적으로 구해진 left값은 좌표압축이 된 값이다.
             // 이를 restore에 넣어 복구 시키면 원래 idx 값이 나온다
             // 이를 다시 nums에 넣어주면 원래 값이 나온다.
             sb.append(nums[restore[left]]).append('\n');
