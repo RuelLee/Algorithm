@@ -2,7 +2,7 @@
  Author : Ruel
  Problem : Baekjoon 14268번 회사 문화 2
  Problem address : https://www.acmicpc.net/problem/14268
- GIt hub : https://github.com/RuelLee
+ Git hub : https://github.com/RuelLee
  Mail Address : lunaticmoonlight@gmail.com
 */
 
@@ -55,7 +55,7 @@ public class Main {
         eulerians = new int[n + 1];
         // 자신이 루트인 서브트리의 마지막 노드 번호
         lastSubtreeNode = new int[n + 1];
-        // 새로운 노드 번호와 서브 트리의 마직 노드 번호 계산
+        // 새로운 노드 번호와 서브 트리의 마지막 노드 번호 계산
         allocateEulerian(1, child);
         
         // 펜윅 트리를 통한 누적합 처리
