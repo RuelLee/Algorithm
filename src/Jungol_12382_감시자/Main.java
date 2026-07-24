@@ -6,7 +6,7 @@
  Mail Address : lunaticmoonlight@gmail.com
 */
 
-package Jungol_12382_김시자;
+package Jungol_12382_감시자;
 
 import java.io.BufferedReader;
 import java.io.IOException;
